@@ -1,25 +1,19 @@
 import React from 'react';
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Col ,Label } from 'reactstrap';
 
  class Encode extends React.Component {
-	
+
 	render(){
 		return(
-			<Form>
-			  <FormGroup row>
-			  <Label for="URL" sm={2}>URL</Label>
-			  <Col sm={10}>
-				  <Input type="text" name="URL" id="URL" placeholder="URL" />
-			  </Col>
-		    </FormGroup>
-	  	  <FormGroup row>
-			  <Label for="encodedURL" sm={2}>encoded URL</Label>
-			  <Col sm={10}>
-				  <Input type="text" name="encodedURL" id="encodedURL" placeholder="encoded URL" />
-			  </Col>
-		    </FormGroup>
-        <Button>Encode</Button>
-      </Form>
+      <div row>
+      <Label for="URL" sm={2}>URL</Label>
+      <Col sm={10}>
+			  <textarea name="URL" id="URL" placeholder="URL" ></textarea>
+      </Col>
+      <Col sm={{ size: 10, offset: 2 }}>
+      <Button>ENCODE</Button>
+      </Col>
+      </div>
 		);
 	}
  }
